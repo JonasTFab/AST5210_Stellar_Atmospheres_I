@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 # Ignore everything in this directory
-#*
-#!/.gitignore
+*
+!/.gitignore
 
 # Except the 'run' folders and readme
-#!README.md
-#!/run
-#!/run_example
-#!/run_project
-=======
-.py
->>>>>>> c278f137566f24765491bcad49d16258c6b6fd06
+!README.md
+!/run
+!/run_example
+!/run_project
