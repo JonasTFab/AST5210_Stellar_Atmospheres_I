@@ -3,5 +3,4 @@ Codes and files related to the course AST5210. More information about this cours
 
 Note that this repository contains only the 'run' folders that should be placed within rh/rh15d/. The 'run' folders are used for compiling the executables ('rh15d_ray', 'rh15d_ray_pool' and 'rh15d_lteray'). More information about the RH code can be found at https://rh15d.readthedocs.io/en/latest/index.html.
 
-Exercise files (*.ipynb) is found in the 'output' folder.
 
