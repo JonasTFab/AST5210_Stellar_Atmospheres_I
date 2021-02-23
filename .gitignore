@@ -5,5 +5,3 @@
 # Except the 'run' folders and readme
 !README.md
 !/run
-!/run_example
-!/run_project
