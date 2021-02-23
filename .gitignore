@@ -1,9 +1,9 @@
 # Ignore everything in this directory
-
-!/.gitignore
+#*
+#!/.gitignore
 
 # Except the 'run' folders and readme
-!README.md
-!/run
-!/run_example
-!/run_project
+#!README.md
+#!/run
+#!/run_example
+#!/run_project
