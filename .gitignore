@@ -1,7 +1,11 @@
-# Ignore everything in this directory
-*
-!/.gitignore
+# Ignore almost everything except the 'run' folders
 
-# Except the 'run' folders and readme
-!README.md
-!/run/*
+*.c
+*.o
+*.h
+Makefile
+rh15d_ray
+rh15d_lteray
+rh15d_ray_pool
+.goutputstream-3H6OZ0
+.d/
