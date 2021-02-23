@@ -4,4 +4,4 @@
 
 # Except the 'run' folders and readme
 !README.md
-!/run
+!/run/*
