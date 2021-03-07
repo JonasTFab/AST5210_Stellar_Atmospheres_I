@@ -6,11 +6,14 @@
 # First specify input files for atmosphere and abundances
 # (both KEYWORD_REQUIRED).
 
-  ATMOS_FILE = ../../Atmos/FALC_82_5x5.hdf5 
+  ATMOS_FILE = ../../Atmos/bifrost_ch012012_hion_snap800.hdf5 
   ABUND_FILE = ../../Atoms_example/abundance.input
 
 # Stuff for 1.5D version:
-  SNAPSHOT = 0
+# coordinates for different features [x_start, x_end, y_start, y_end]
+# currently for snapshot 800 (bifrost_ch012012_hion_snap800)
+
+  SNAPSHOT = 800    # initially 0
 
   X_START = 0
   X_END   = 1 
@@ -19,7 +22,7 @@
   Y_START = 0
   Y_END   = 1
   Y_STEP  = 1 
-  
+
 # Runs only for non-converged columns (assumes output files already exist)
   15D_RERUN = FALSE
 
@@ -73,7 +76,7 @@
 #  NON_ICE = FALSE
 
 # Table of additional wavelengths  KEYWORD_OPTIONAL
-#   WAVETABLE = ../../Atoms_example/wave_files/cont.wave
+#   WAVETABLE = ../../Atoms/wave_files/IRIS_NUV_full.wave\n
 
 # Maximum number of iterations to initialize scattering radiation
 # field in the background (KEYWORD_OPTIONAL).
@@ -151,6 +154,7 @@
 # It is needed when either KURUCZ_DATA or SOLVE_NE is set an is of
 # type KEYWORD_OPTIONAL
   KURUCZ_PF_DATA = ../../Atoms_example/pf_Kurucz.input
+  
 
 # BARKLEM_DATA_DIR should point to the directory where the Barklem collisional
 # data files are located (e.g Barklem_spdata.dat). Type is KEYWORD_OPTIONAL,
