@@ -10,24 +10,24 @@
   ABUND_FILE = ../../Atoms_example/abundance.input
 
 # Stuff for 1.5D version:
-# coordinates for different features [x_start, x_end, y_start, y_end]
+# coordinates of different features [x_start, x_end, y_start, y_end]
 # currently for snapshot 800 (bifrost_ch012012_hion_snap800)
 
-  SNAPSHOT = 800    # initially 0
+  SNAPSHOT = 0
 
-  X_START = 0
-  X_END   = 1 
+  X_START = 757
+  X_END   = 758
   X_STEP  = 1 
 
-  Y_START = 0
-  Y_END   = 1
-  Y_STEP  = 1 
+  Y_START = 380
+  Y_END   = 381
+  Y_STEP  = 1
 
 # Runs only for non-converged columns (assumes output files already exist)
   15D_RERUN = FALSE
 
 # Write tau=1 height for all wavelengths? (Takes as much space as intensity in output_ray.ncdf.) 
-  15D_WRITE_TAU1 = FALSE 
+  15D_WRITE_TAU1 = TRUE 
 
 # Cut the atmosphere above a certain TMAX?
   15D_DEPTH_ZCUT = TRUE
@@ -37,7 +37,7 @@
   15D_DEPTH_REFINE = FALSE
 
 # Write level populations? (NLTE and LTE)
-  15D_WRITE_POPS = FALSE
+  15D_WRITE_POPS = TRUE
 
 # Write radiative rates?
   15D_WRITE_RRATES = FALSE
@@ -76,7 +76,7 @@
 #  NON_ICE = FALSE
 
 # Table of additional wavelengths  KEYWORD_OPTIONAL
-#   WAVETABLE = ../../Atoms/wave_files/IRIS_NUV_full.wave\n
+   WAVETABLE = ../../Atoms/wave_files/IRIS_NUV_full.wave
 
 # Maximum number of iterations to initialize scattering radiation
 # field in the background (KEYWORD_OPTIONAL).
@@ -90,15 +90,15 @@
 
 # Set number of maximum iterations and convergence limit
 # (both KEYWORD_REQUIRED).
-  N_MAX_ITER = 150 
-  ITER_LIMIT = 1.0E-04
+  N_MAX_ITER = 300 
+  ITER_LIMIT = 1.0E-03
 
 # Parameters for Ng convergence acceleration (all are KEYWORD_OPTIONAL)
 # (default for NG_ORDER = 0 --> no acceleration)
 # this was: 20, 2, 9
-  NG_DELAY  = 20 
-  NG_ORDER  = 2 
-  NG_PERIOD = 20
+  NG_DELAY  = 40      # if crash, try to increase this
+  NG_ORDER  = 2       # try 0
+  NG_PERIOD = 9       # accelerating every # iteration
 
 # Regulate the approximation for the formal solution in the rhf1d and 
 # rh15d versions of the code (KEYWORD_DEFAULT). Options are LINEAR, BEZIER 
@@ -147,7 +147,7 @@
 # When KURUCZ_DATA is set to ``none'' (the default value) no data is read.
 # Solve for electron density if SOLVE_NE is set to true.
 # Type is KEYWORD_DEFAULT. Default value is FALSE.
-#  KURUCZ_DATA = kurucz.input
+  KURUCZ_DATA = kurucz.input
 
 # KURUCZ_PF_DATA should point to the file with Kurucz partition function
 # tables (as function of T) for the first 100 peridic table elements.
@@ -166,7 +166,7 @@
 #  SOLVE_NE = ITERATION
 
 ## Include scattering in the background Kurucz lines:
-#  RLK_SCATTER = TRUE
+  RLK_SCATTER = TRUE
 
 # Set HYDROGEN_LTE = TRUE if hydrogen in the background has to be
 # treated with LTE populations (KEYWORD_DEFAULT). Default is FALSE
@@ -198,8 +198,8 @@
 # If VACUUM_TO_AIR (KEYWORD_OPTIONAL) is set to TRUE wavelengths at and above
 # VACUUM_TO_AIR_LIMIT (see spectrum.h) will be converted to air wavelengths
 # in the output files.
-  VACUUM_TO_AIR = TRUE
-
+  VACUUM_TO_AIR = FALSE
+ 
 # Input file for the magnetic field (KEYWORD_OPTIONAL). Default is "none".
 # Never used in RH 1.5D, but must be set for compatibility reasons. 
 # Cannot be set if STOKES_MODE = NO_STOKES.

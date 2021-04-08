@@ -5,8 +5,8 @@
 #  model file              ACTIVE/PASSIVE  INITIAL_SOLUTION   population file
 
   ../../Atoms_example/H_6.atom     PASSIVE   ZERO_RADIATION   
-  ../../Atoms/MgII-IRIS.atom        ACTIVE    ZERO_RADIATION   
-  ../../Atoms/CaII_PRD.atom        PASSIVE    ZERO_RADIATION   
+  ../../Atoms/MgII-IRIS.atom       PASSIVE    ZERO_RADIATION   
+  ../../Atoms/CaII_PRD.atom         ACTIVE    ZERO_RADIATION   
   ../../Atoms/Si.atom              PASSIVE   LTE_POPULATIONS   
   ../../Atoms/Al.atom              PASSIVE   LTE_POPULATIONS   
   ../../Atoms/Fe.atom              PASSIVE   LTE_POPULATIONS   

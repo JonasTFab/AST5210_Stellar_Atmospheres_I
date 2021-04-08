@@ -73,7 +73,7 @@
 #  NON_ICE = FALSE
 
 # Table of additional wavelengths  KEYWORD_OPTIONAL
-WAVETABLE = wavelength_files/adjusted_IRIS.wave
+#   WAVETABLE = ../../Atoms_example/wave_files/cont.wave
 
 # Maximum number of iterations to initialize scattering radiation
 # field in the background (KEYWORD_OPTIONAL).
@@ -108,7 +108,7 @@ WAVETABLE = wavelength_files/adjusted_IRIS.wave
 # negative, the dpopsmax of the current main iteration is taken as the
 # PRD convergence limit. Both are KEYWORD_OPTIONAL. If PRD_N_MAX_ITER = 0
 # all lines will be treated in CRD.
-  PRD_N_MAX_ITER = 3
+  PRD_N_MAX_ITER = 0
   PRD_ITER_LIMIT = 1.0E-2
 
 # PRD_NG_?? are the Ng accelleration parameters for PRD iterations
