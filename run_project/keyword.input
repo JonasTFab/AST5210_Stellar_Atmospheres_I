@@ -96,7 +96,7 @@
 # Parameters for Ng convergence acceleration (all are KEYWORD_OPTIONAL)
 # (default for NG_ORDER = 0 --> no acceleration)
 # this was: 20, 2, 9
-  NG_DELAY  = 40      # if crash, try to increase this
+  NG_DELAY  = 20      # if crash, try to increase this
   NG_ORDER  = 2       # try 0
   NG_PERIOD = 9       # accelerating every # iteration
 
